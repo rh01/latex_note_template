@@ -1,0 +1,38 @@
+\documentclass{letter}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{changepage}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.8}
+
+\pgfplotsset{vasymptote/.style={
+        before end axis/.append code={
+            \draw[densely dashed] ({rel axis cs:0,0} -| {axis cs:#1,0})
+            -- ({rel axis cs:0,1} -| {axis cs:#1,0});
+        }
+    }}
+    
+\newcommand{\m}{\begin{bmatrix}}
+\newcommand{\mm}{\end{bmatrix}}
+\newcommand{\0}[1]{\begin{bmatrix}#1\end{bmatrix}}
+\newcommand{\h}[1]{\underline{\textbf{#1}}}	
+
+% Xelatex中文宏包
+\usepackage{CTEX}
+\begin{document}
+    \begin{center}
+        \LARGE 机器学习 - May 3'rd, 2018\\
+        \large 线性回归
+    \end{center}
+    \vspace{0.25 in}
+    
+    \h{优化}
+    \begin{itemize}
+		\item[\textbf{Ex. }] Newton's Law of Cooling: A hot/cold object's temperature changes proportionally to the difference to the surrounding temperature.\\\\
+		$\frac{dT}{dt} = -k(T-T_{room})$
+	\end{itemize}
+    
+\end{document}
